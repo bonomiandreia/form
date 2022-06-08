@@ -1,0 +1,28 @@
+  
+    <div class="p-4">
+      <div class="row">
+        <h1>Wunder Mobility</h1>
+      </div>
+    </div>
+  <mat-stepper class="create-account-form" #stepper  [selectedIndex]="this.selected">
+    <mat-step label="Insert your personal infomation">
+      <app-stepper-personal-information [events]="counter"></app-stepper-personal-information>
+    </mat-step>
+    <mat-step label="Insert your address">
+      <app-stepper-address-information [events]="counter"></app-stepper-address-information>
+    </mat-step>
+    <mat-step label="Fill out your method payment">
+     <app-stepper-payment-information [events]="counter"></app-stepper-payment-information>
+    </mat-step>
+    <mat-step label="Sending...">
+      <app-stepper-success [events]="counter"></app-stepper-success>
+    </mat-step>
+  </mat-stepper>
+  <div>
+    <button (click)="goBack()" type="button" [disabled]="stepper.selectedIndex === 0"  type="button" class="btn btn-light">Back</button>
+    <button (click)="goForward()" type="button" type="button" class="btn btn-primary">Next</button>
+  </div>
+
+  
+
+

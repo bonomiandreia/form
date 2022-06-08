@@ -1,0 +1,14 @@
+<form [formGroup]="paymentForm">
+    <div class="row">
+        <mat-form-field appearance="outline">
+        <mat-label>Owner</mat-label>
+        <input matInput placeholder="name of your account here..." formControlName="owner" required>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>IBAN</mat-label>
+            <input matInput placeholder="" formControlName="iban" required>
+        </mat-form-field>
+    </div>
+</form>
